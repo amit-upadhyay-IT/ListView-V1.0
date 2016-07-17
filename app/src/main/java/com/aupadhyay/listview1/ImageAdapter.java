@@ -38,12 +38,12 @@ public class ImageAdapter extends BaseAdapter {
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
 
-        View view1 = LayoutInflater.from(context).inflate(R.layout.list_row, viewGroup, false);
-        ImageView imageView = (ImageView) view1.findViewById(R.id.imageView);
-        TextView pictureNameTextView = (TextView) view1.findViewById(R.id.pictureNameTextView);
+        view = LayoutInflater.from(context).inflate(R.layout.list_row, viewGroup, false);
+        ImageView imageView = (ImageView) view.findViewById(R.id.imageView);
+        TextView pictureNameTextView = (TextView) view.findViewById(R.id.pictureNameTextView);
         imageView.setImageResource(context.getResources().getIdentifier("p"+(i+1), "drawable", context.getPackageName()));
         pictureNameTextView.setText("Picture "+(i+1));
 
-        return view1;
+        return view;
     }
 }
